@@ -22,9 +22,7 @@ function getComputerChoice() {
 
 // Funcation taking two parameters, one from player and one from the comptuter
 function playRound(playerSelection, computerSelection) {
-    let log = "";
-    
-
+ 
     // The parameters from the function will turn lower case so they can be case-insensitive
     let player = playerSelection.toLowerCase();
     let computer = computerSelection.toLowerCase();
@@ -33,34 +31,31 @@ function playRound(playerSelection, computerSelection) {
     if (((player == "rock") && (computer == "rock")) || 
     ((player == "scissors") && (computer == "scissors")) ||
     ((player == "paper") && (computer == "paper"))) {
-        log = "It's a tie!";
+        return "It's a tie!";
     } 
     
     // All scenarios where the player wins and it will return "You win! x beats x."
     else if ((player == "rock") && (computer == "scissors")) {
-        log = "You win! Rock beats Scissors.";
+        return "You win! Rock beats Scissors.";
     } else if ((player == "scissors") && (computer == "paper")) {
-        log = "You win! Scissors beats Paper.";
+        return "You win! Scissors beats Paper.";
     } else if ((player == "paper") && (computer == "rock")) {
-        log = "You win! Paper beats Rock.";
+        return "You win! Paper beats Rock.";
     } 
     
     // All scenarios where the player loses and it will return "You lose! x beats x."
     else if ((player == "rock") && (computer == "paper")) {
-        log = "You lose! Paper beats Rock.";
+        return "You lose! Paper beats Rock.";
     } else if ((player == "scissors") && (computer == "rock")) {
-        log = "You lose! Rock beats Scissors.";
+        return "You lose! Rock beats Scissors.";
     } else if ((player == "paper") && (computer == "scissors")) {
-        log = "You lose! Scissors beats Paper.";
+        return "You lose! Scissors beats Paper.";
     } 
 
     // If the player returns anything other than "Rock", "Paper". or "Scissors" then it will return "That is not a valid choice."
     else {
-        log = "That is not a valid choice.";
+        return "That is not a valid choice.";
     }
-
-    // The function will return whatever log equals
-    return log;
 }
 
 
@@ -94,7 +89,6 @@ function game() {
         // Calling the current score of the round
         console.log("Player: " + playerScore);
         console.log("Computer: " + computerScore);
-    
     }
 }
 
