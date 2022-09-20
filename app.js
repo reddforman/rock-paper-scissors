@@ -75,8 +75,8 @@ function game() {
         // Call the text that comes from playRound() function, the "You win...", "You lose...", "You tied..."
         let roundResult = playRound(playerSelection, computerSelection);
 
-        // Calling the function playRound() with the options from the previous variables
-        console.log(playRound(playerSelection, computerSelection));
+        // Calling the function playRound() with the options from the previous variables with a confirm screen
+        confirm(playRound(playerSelection, computerSelection));
                 
         // Searchs if roundResult includes "win" or "lose", it'll add 1 to either playerScore 
         // or computerScore (variables set to 0 in the beginning of script) appropriatley
@@ -89,6 +89,28 @@ function game() {
         // Calling the current score of the round
         console.log("Player: " + playerScore);
         console.log("Computer: " + computerScore);
+    }
+    
+    // Assigns the final score to the finalScore variable
+    const finalScore = "Player: " + playerScore + "      " + "Computer: " + computerScore;
+
+    // If the player has more points than the computer then a confirmation message will say the player
+    // won and if the player clicks "OK" then the page will reload and start a new game (vice versa)
+    if (playerScore > computerScore) {
+        const winGame = confirm("GAME OVER! You won the game! Click 'OK' to start a new game." + "\n" + finalScore);
+        if (winGame == true) {
+            window.location.reload();
+        }
+    } else if (playerScore < computerScore) {
+        const loseGame = confirm("GAME OVER! You lost the game. Click 'OK' to start a new game." + "\n" + finalScore);
+        if (loseGame == true) {
+            window.location.reload();
+        }
+    } else {
+        const tieGame = confirm("GAME OVER! You tied the computer. Click 'OK' to start a new game." + "\n" + finalScore);
+        if (tieGame == true) {
+            window.location.reload();
+        }
     }
 }
 
