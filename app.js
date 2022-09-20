@@ -1,6 +1,9 @@
 
 // Arry of rock, paper, and scissors
 const rockPaperScissors = ["Rock", "Paper", "Scissors"];
+let computerScore = 0;
+let playerScore = 0;
+
 
 // Will randomly return either "Rock", "Paper". or "Scissors"
 function getComputerChoice() {
@@ -16,8 +19,11 @@ function getComputerChoice() {
     return randomChoice;
 }
 
+
 // Funcation taking two parameters, one from player and one from the comptuter
 function playRound(playerSelection, computerSelection) {
+    let log = "";
+    
 
     // The parameters from the function will turn lower case so they can be case-insensitive
     let player = playerSelection.toLowerCase();
@@ -27,34 +33,70 @@ function playRound(playerSelection, computerSelection) {
     if (((player == "rock") && (computer == "rock")) || 
     ((player == "scissors") && (computer == "scissors")) ||
     ((player == "paper") && (computer == "paper"))) {
-        return "It's a tie!";
+        log = "It's a tie!";
     } 
     
     // All scenarios where the player wins and it will return "You win! x beats x."
     else if ((player == "rock") && (computer == "scissors")) {
-        return "You win! Rock beats Scissors.";
+        log = "You win! Rock beats Scissors.";
     } else if ((player == "scissors") && (computer == "paper")) {
-        return "You win! Scissors beats Paper.";
+        log = "You win! Scissors beats Paper.";
     } else if ((player == "paper") && (computer == "rock")) {
-        return "You win! Paper beats Rock.";
+        log = "You win! Paper beats Rock.";
     } 
     
     // All scenarios where the player loses and it will return "You lose! x beats x."
     else if ((player == "rock") && (computer == "paper")) {
-        return "You lose! Paper beats Rock.";
+        log = "You lose! Paper beats Rock.";
     } else if ((player == "scissors") && (computer == "rock")) {
-        return "You lose! Rock beats Scissors.";
+        log = "You lose! Rock beats Scissors.";
     } else if ((player == "paper") && (computer == "scissors")) {
-        return "You lose! Scissors beats Paper.";
+        log = "You lose! Scissors beats Paper.";
     } 
-    
+
+    // If the player returns anything other than "Rock", "Paper". or "Scissors" then it will return "That is not a valid choice."
+    else {
+        log = "That is not a valid choice.";
+    }
+
+    // The function will return whatever log equals
+    return log;
 }
 
 
+// Function that will play 5 rounds of rock paper scissors
+function game() {
 
-// Assigns variables for the players and computers choice
-const playerSelection = "Paper";
-const computerSelection = getComputerChoice();
+    // For loop that will repeat whatever is in the for loop 5 times, making it so the game has 5 rounds
+    for (let i = 0; i < 5; i++) {
 
-// Calling the function with the variables from previously
-console.log(playRound(playerSelection, computerSelection));
+        // Will announce the current round before user submits their choice
+        console.log("Round " + (i + 1));
+
+        // Used to be outside the function. Moved it inside so it repeatly asks the user what 
+        // choice they want to make and so the computer has different choices every round as well
+        const playerSelection = prompt("Choose 'Rock', 'Paper' or 'Scissors'!");
+        const computerSelection = getComputerChoice();
+        // Call the text that comes from playRound() function, the "You win...", "You lose...", "You tied..."
+        let roundResult = playRound(playerSelection, computerSelection);
+
+        // Calling the function playRound() with the options from the previous variables
+        console.log(playRound(playerSelection, computerSelection));
+                
+        // Searchs if roundResult includes "win" or "lose", it'll add 1 to either playerScore 
+        // or computerScore (variables set to 0 in the beginning of script) appropriatley
+        if (roundResult.search("win") >= 0) {
+            playerScore++;
+        } else if (roundResult.search("lose") >= 0) {
+            computerScore++;
+        }
+        
+        // Calling the current score of the round
+        console.log("Player: " + playerScore);
+        console.log("Computer: " + computerScore);
+    
+    }
+}
+
+// Calling function called game()
+game();
