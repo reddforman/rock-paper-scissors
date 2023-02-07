@@ -4,6 +4,24 @@ const rockPaperScissors = ["Rock", "Paper", "Scissors"];
 let computerScore = 0;
 let playerScore = 0;
 
+const rock = document.getElementById("rockBtn");
+const paper = document.getElementById("paperBtn");
+const scissors = document.getElementById("scissorsBtn");
+
+//hello
+
+rock.addEventListener("click", function() {
+    console.log(playRound("rock", getComputerChoice()));
+});
+
+paper.addEventListener("click", function() {
+    console.log(playRound("paper", getComputerChoice()))
+});
+
+scissors.addEventListener("click", function() {
+    console.log(playRound("scissors", getComputerChoice()))
+});
+
 
 // Will randomly return either "Rock", "Paper". or "Scissors"
 function getComputerChoice() {
@@ -60,7 +78,7 @@ function playRound(playerSelection, computerSelection) {
 
 
 // Function that will play 5 rounds of rock paper scissors
-function game() {
+/*function game() {
 
     // For loop that will repeat whatever is in the for loop 5 times, making it so the game has 5 rounds
     for (let i = 0; i < 5; i++) {
@@ -115,4 +133,4 @@ function game() {
 }
 
 // Calling function called game()
-game();
+game();*/
