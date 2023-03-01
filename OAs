@@ -1,0 +1,59 @@
+[33mcommit 433ef0fbc9b6be339bc2a5f2e3486dd69576271d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/rps-ui[m[33m, [m[1;32mrps-ui[m[33m)[m
+Author: reddforman <edwardhamidov@aol.com>
+Date:   Wed Mar 1 14:32:41 2023 -0500
+
+    All functionality should be working now
+
+[33mcommit 65762980afedd191748bb4554bc90cfbb1dce23a[m
+Author: reddforman <edwardhamidov@aol.com>
+Date:   Wed Mar 1 09:35:00 2023 -0500
+
+    Shows result and score now
+
+[33mcommit 685da0706db933db1956f2885bf0d4173c1d95b7[m
+Author: reddforman <edwardhamidov@aol.com>
+Date:   Tue Feb 7 17:59:47 2023 -0500
+
+    made some updates
+
+[33mcommit 92710dc5fd945165f8e0a794ad9263a2474a0156[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Edward <edwardhamidov@aol.com>
+Date:   Tue Sep 20 16:54:40 2022 -0400
+
+    Initial commit
+
+[33mcommit c9adcb147745659e4d734530d28b555fc5a68617[m
+Author: Edward <edwardhamidov@aol.com>
+Date:   Tue Sep 20 16:29:30 2022 -0400
+
+    Add app.js
+
+[33mcommit 2dc9e61e50eea266c6beebb73702674c73b758bc[m
+Author: Edward <edwardhamidov@aol.com>
+Date:   Tue Sep 20 15:41:07 2022 -0400
+
+    Add app.js
+
+[33mcommit e96b5ac8a9aad5975ccf160a4eb6ec425dfaaaf0[m
+Author: Edward <edwardhamidov@aol.com>
+Date:   Tue Sep 20 15:35:02 2022 -0400
+
+    Add app.js
+
+[33mcommit 46efc86efc4e29d91a3e9053ee0b2c119c747534[m
+Author: Edward <edwardhamidov@aol.com>
+Date:   Mon Sep 19 22:33:47 2022 -0400
+
+    app.js
+
+[33mcommit df27e469bc1157e6dc9129b3e2286791a9f90bbc[m
+Author: Edward <edwardhamidov@aol.com>
+Date:   Mon Sep 19 17:45:47 2022 -0400
+
+    Add index.html style.css app.js
+
+[33mcommit 61815cd0d102596171e54dbf4ca653286ac6cd19[m
+Author: reddforman <edwardhamidov@aol.com>
+Date:   Mon Sep 19 17:39:05 2022 -0400
+
+    Initial commit
